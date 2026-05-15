@@ -4,7 +4,7 @@
 
 **Author:** Sami EL AKKAD · Tsinghua SIGS, AI MSc · sam25@mails.tsinghua.edu.cn
 **Product:** [jak.ma](https://jak.ma)
-**System reference:** [jak-ma-eval-suite/docs/architecture.md](https://github.com/selakkad2003/jak-ma-eval-suite/blob/main/docs/architecture.md)
+**System reference:** [jak-ma-eval-suite/docs/architecture.md](https://github.com/Samielakkad/jak-ma-eval-suite/blob/main/docs/architecture.md)
 
 ---
 
@@ -24,7 +24,7 @@ The interesting part is not the model. The interesting part is that the model is
 
 **For the market:** A pricing primitive that did not exist. There is no published price book for a faucet repair in Casablanca. There is now.
 
-The product surface is a chat. The underlying machinery is described in [docs/architecture.md](https://github.com/selakkad2003/jak-ma-eval-suite/blob/main/docs/architecture.md). This document is the *case study* — what shipped, what didn't, what we learned doing it.
+The product surface is a chat. The underlying machinery is described in [docs/architecture.md](https://github.com/Samielakkad/jak-ma-eval-suite/blob/main/docs/architecture.md). This document is the *case study* — what shipped, what didn't, what we learned doing it.
 
 ---
 
@@ -160,7 +160,7 @@ These were on the table and we said no:
 
 ## The roadmap, in priority order
 
-1. **LoRA fine-tune Llama 3.1 8B for Pass 2.** Target: 3× cost reduction at the current eval-score parity. Compute budget: ~$50 on Modal for the first run. Recipe in [jak-ma-eval-suite/scripts/finetune/](https://github.com/selakkad2003/jak-ma-eval-suite).
+1. **LoRA fine-tune Llama 3.1 8B for Pass 2.** Target: 3× cost reduction at the current eval-score parity. Compute budget: ~$50 on Modal for the first run. Recipe in [jak-ma-eval-suite/scripts/finetune/](https://github.com/Samielakkad/jak-ma-eval-suite).
 2. **Semantic cache layer.** Sentence-level embedding lookup against the last 30 days of successful, verified Pass 2 outputs. Target: 30–40% query bypass. Latency win is incidental; the goal is cost.
 3. **Browser-side image classifier.** MobileNetV3 via TensorFlow.js, trained on 50–100 labeled images per trade. Pushes vision classification cost from $0.005/image to $0.
 4. **District federation.** E2EE blob sync of localStorage across user devices. Design is sketched; no code yet.
@@ -184,10 +184,10 @@ The cost line is meaningful: at 100,000 daily queries (year-end target), our inf
 
 ## What I'd do differently
 
-- **Build the eval suite before building the product.** We built jak.ma, then built the eval suite, then realized the eval suite would have told us to build a different thing. The methodology repo ([ernie-evaluation-notes](https://github.com/selakkad2003/ernie-evaluation-notes)) is the closest thing to "the eval suite I wish I had on day one."
+- **Build the eval suite before building the product.** We built jak.ma, then built the eval suite, then realized the eval suite would have told us to build a different thing. The methodology repo ([ernie-evaluation-notes](https://github.com/Samielakkad/ernie-evaluation-notes)) is the closest thing to "the eval suite I wish I had on day one."
 - **Curate the price table earlier.** The survey was done at month 4. It should have been month 1. The model was fluent immediately; the model was *correct* only after the survey.
 - **Skip the single-pass experiment.** We knew within a week that two passes would win. We spent another week on single-pass tool-use because it was "more elegant." It wasn't.
-- **Write the verifier spec before the verifier.** The [VERIFIER_SPEC.md](https://github.com/selakkad2003/jak-ma-eval-suite/blob/main/VERIFIER_SPEC.md) was written after the verifier shipped. Writing it first would have forced the design conversation upstream.
+- **Write the verifier spec before the verifier.** The [VERIFIER_SPEC.md](https://github.com/Samielakkad/jak-ma-eval-suite/blob/main/VERIFIER_SPEC.md) was written after the verifier shipped. Writing it first would have forced the design conversation upstream.
 
 ---
 
@@ -203,11 +203,11 @@ The cost line is meaningful: at 100,000 daily queries (year-end target), our inf
 
 ## References
 
-- [docs/architecture.md](https://github.com/selakkad2003/jak-ma-eval-suite/blob/main/docs/architecture.md) — the system paper
-- [VERIFIER_SPEC.md](https://github.com/selakkad2003/jak-ma-eval-suite/blob/main/VERIFIER_SPEC.md) — what V1–V6 check
-- [pm-frameworks-darija](https://github.com/selakkad2003/pm-frameworks-darija) — pricing taxonomy, calibration protocol, eval rubric
-- [ernie-evaluation-notes](https://github.com/selakkad2003/ernie-evaluation-notes) — the calibration methodology applied here, from the Baidu ERNIE Mentor Program
-- [darija-nlp-resources](https://github.com/selakkad2003/darija-nlp-resources) — public corpora, papers, tools
+- [docs/architecture.md](https://github.com/Samielakkad/jak-ma-eval-suite/blob/main/docs/architecture.md) — the system paper
+- [VERIFIER_SPEC.md](https://github.com/Samielakkad/jak-ma-eval-suite/blob/main/VERIFIER_SPEC.md) — what V1–V6 check
+- [pm-frameworks-darija](https://github.com/Samielakkad/pm-frameworks-darija) — pricing taxonomy, calibration protocol, eval rubric
+- [ernie-evaluation-notes](https://github.com/Samielakkad/ernie-evaluation-notes) — the calibration methodology applied here, from the Baidu ERNIE Mentor Program
+- [darija-nlp-resources](https://github.com/Samielakkad/darija-nlp-resources) — public corpora, papers, tools
 
 ---
 
