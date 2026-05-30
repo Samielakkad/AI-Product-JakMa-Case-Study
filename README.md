@@ -1,5 +1,9 @@
 # jak.ma — Production Case Study
 
+[![AI + Product](https://img.shields.io/badge/AI%20%2B-Product-8A2BE2)](#)
+
+**Verifier-gated LLM retrieval shipped into a live Moroccan home-services marketplace.**
+
 > What it actually took to ship verifier-gated retrieval into a Moroccan service marketplace. The decisions, the tradeoffs, the things that broke, and the numbers a year in.
 
 **Author:** Sami EL AKKAD · Tsinghua SIGS, AI MSc · sam25@mails.tsinghua.edu.cn
