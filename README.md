@@ -216,3 +216,8 @@ The cost line is meaningful: at 100,000 daily queries (year-end target), our inf
 ---
 
 **Sami EL AKKAD** · Tsinghua SIGS AI MSc · sam25@mails.tsinghua.edu.cn · [jak.ma](https://jak.ma)
+
+
+---
+
+**License — All rights reserved.** This repository is shared for review only. Please **contact me before using any part of it** for any purpose. See [LICENSE](LICENSE).
